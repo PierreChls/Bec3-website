@@ -4,10 +4,10 @@
 	      <div class="container">
 	      	<div class="menu">
 		        <div class="row">
-		          <div class="col-xs-6">
-		            <a href="index.html"><img src="<?php bloginfo('template_directory'); ?>/img/logo.svg" alt="Logo"></a>
+		          <div class="col-xs-3">
+		            <a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/logo.svg" alt="Logo"></a>
 		          </div>
-		          <div class="col-xs-6 signin text-right navbar-nav">
+		          <div class="col-xs-9 signin text-right navbar-nav">
 		          	<?php
 		          	
 		          		$defaults = array(
@@ -53,10 +53,10 @@
 	              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
 	                <div class="row">
 	                  <div class="col-xs-6 text-right">
-	                    <a href="#bec-what" class="btn btn-secondary btn-lg scroll">Learn</a>
+	                    <a href="#learn" class="btn btn-secondary btn-lg scroll">Learn</a>
 	                  </div>
 	                  <div class="col-xs-6 text-left">
-	                    <a href="#invite" class="btn btn-primary btn-lg scroll">MyBeC3</a>
+	                    <a href="https://bec3.univ-mlv.fr/BeC3/connect.php" target="_blank" class="btn btn-primary btn-lg scroll">MyBeC3</a>
 	                  </div>
 	                </div>
 	              </div>
@@ -66,10 +66,6 @@
 	        </div>
 	      </div>
 	    </header>
-	    
-	    <div class="mouse-icon hidden-xs">
-			<div class="scroll"></div>
-		</div>
 	    
 	    <section id="bec-what" class="pad-xl">
 	      <div class="container">
@@ -85,8 +81,8 @@
 					);
 					$my_posts = get_posts( $args );
 					if( $my_posts ) { ?>
-						<h2><?php echo $my_posts[0]->post_title ?></h2>
-						<p class="lead"><?php echo $my_posts[0]->post_content ?></p>
+						<h2 class="white"><?php echo $my_posts[0]->post_title ?></h2>
+						<p class="lead white"><?php echo $my_posts[0]->post_content ?></p>
 					<?php						
 					}
 				?>
@@ -94,7 +90,7 @@
 	        </div>
 	        
 	        <div class="screen">
-		        <img src="<?php bloginfo('template_directory'); ?>/img/screen.png">
+	        	<object type="image/svg+xml" data="<?php bloginfo('template_directory'); ?>/img/screen.svg"  border="0"></object>
 	        </div>
 	      </div>
 	    </section>
@@ -134,8 +130,8 @@
 					);
 					$my_posts = get_posts( $args );
 					if( $my_posts ) { ?>	
-						<h2 class="white"><?php echo $my_posts[0]->post_title ?></h2>
-						<p class="white"><?php echo $my_posts[0]->post_content ?></p>		
+						<h2 class="black"><?php echo $my_posts[0]->post_title ?></h2>
+						<p class="black"><?php echo $my_posts[0]->post_content ?></p>		
 					<?php
 					}
 				?>

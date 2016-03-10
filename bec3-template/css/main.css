@@ -20,7 +20,7 @@ h1 {
   font-size: 55px;
   line-height: 55px;
   letter-spacing: -1px;
-  color: #525252;
+  color: #08133F;
   font-weight: 700;
 }
 
@@ -28,7 +28,7 @@ h2 {
   font-size: 40px;
   line-height: 40px;
   letter-spacing: -0.5px;
-  color: #525252;
+  color: #08133F;
   font-weight: 700;
 }
 
@@ -36,21 +36,21 @@ h3 {
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0px;
-  color: #535353;
+  color: #08133F;
   font-weight: 700;
 }
 
 .lead {
   font-size: 21px;
   line-height: 26px;
-  color: #525252;
+  color: #08133F;
   font-weight: 400;
 }
 
 p {
   font-size: 17px;
   line-height: 22px;
-  color: #525252;
+  color: #08133F;
   font-weight: 400;
 }
 
@@ -68,7 +68,7 @@ a {
 
 a:hover, a:focus {
   text-decoration: none;
-  color: #525252;
+  color: #08133F;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
@@ -76,11 +76,11 @@ a:hover, a:focus {
 }
 
 ::selection {
-	background: #525252; /* Safari */
+	background: #08133F; /* Safari */
 	color: #FFFFFF;
 }
 ::-moz-selection {
-	background: #525252; /* Firefox */
+	background: #08133F; /* Firefox */
 	color: #FFFFFF;
 }
 
@@ -125,12 +125,12 @@ a:hover, a:focus {
 }
 
 .btn-primary {
-  background-color:#525252;
+  background-color:#08133F;
   color: #ffffff;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-  background-color: #eb683c;
+  background-color: #FFC11C;
   color: #ffffff;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -200,14 +200,14 @@ a:hover, a:focus {
 /************/
 
 .black {
-  color: #525252;
+  color: #08133F;
 }
 .white {
   color: #ffffff;
 }
 
 .black-bg {
-  background: #525252;
+  background: #08133F;
 }
 
 .white-bg {
@@ -221,9 +221,9 @@ a:hover, a:focus {
    
 header {
   background-color: #ffffff;
-  border-top: 10px solid #eb683c;
+  border-top: 10px solid #FFC11C;
   width: 100%;
-  padding: 20px 0px 60px 0px;
+  padding: 0px 0px 60px 0px;
   height: 100vh;
   overflow: hidden;
   background-size: cover;
@@ -232,20 +232,25 @@ header {
   -o-background-size: cover;
 }
 
+header.page{
+	height: auto;
+	padding: 0px 0px 0px 0px;
+}
+
 header .container {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	border-bottom: 1px solid #f2f2f2;
 }
 
 header .container .menu {
 	margin: 0 auto;
-	padding: 10px 50px 30px 50px;
+	padding: 20px 50px 30px 50px;
+	background: #08133F;
 }
 
 header .container .menu a{
-	color: #525252;
+	color: #fff;
 }
 
 header .container .menu ul#main-menu-index{
@@ -264,22 +269,245 @@ header .container .menu a:after {
 
 
 .header-info {
-  position: absolute;
-  bottom: 0;
+  position: relative;
   width: 100%;
-  left: 0;
-  right: 0;
-  margin-left: 0px;
-  margin-bottom: 12%;
+  margin-top: 4em;
 }
+
+.header-info h1{
+  font-size: 13vh;
+  line-height: 13vh;
+}
+
+.header-info p.lead{
+  font-size: 5vh;
+  line-height: 5vh;
+}
+
 
 .signin {
   padding-top: 9px;
 }
 
+#primary #main h1.header-news-title{
+	color: #ffffff;
+    text-align: center;
+    background: #08133F;
+    padding: 1em;
+    margin: 0;
+}
+
+#primary #main .all-categories{
+	text-align: center;
+    margin: 3em auto 2em;
+}
+
+#primary #main .all-categories a {
+    padding: 0 2em;
+    text-transform: uppercase;
+    color: #555555;
+    font-weight: 800;
+}
+
+#primary #main .all-news{
+	padding: 1em;
+	width: auto;
+	margin: auto;
+}
+
+#primary #main .all-news .no-post{
+	text-align: center;
+	font-size: 2em;
+	font-weight: 800;
+	margin: 2em auto 10em auto;
+}
+
+#primary #main .all-news .news{
+	padding: 1em;
+	width: auto;
+	margin: 1em auto;
+	background: #f7f7f7;
+}
+
+#primary #main .all-news .news .cat{
+    border-bottom: 2px solid #555;
+    color: #555;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+#primary #main .all-news .news .read-more{
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+#primary #main .all-news .news .read-more a{
+    border-bottom: 2px solid #555;
+}
+
+#primary #main .all-news .news .time{
+    text-align: right;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+#primary #main .all-news .news .time:before {
+	content:url('../img/post/date-post.svg');
+}
+
+
+#primary #main .post-content{
+	background: #f7f7f7;
+}
+
+#primary #main .post-content h1.header-post-title{
+	color: #ffffff;
+    text-align: center;
+    background: #08133F;
+    padding: 1em;
+    margin: 0;
+}
+
+#primary #main .post-content .content{
+    padding: 1em;
+}
+
+#primary #main .post-content .post-info{
+	padding: 1em;
+    text-align: center;
+    background: #FFC11C;
+    margin: 0 auto 1em auto;
+}
+
+
+#primary #main .post-content .post-info .cat{
+	text-transform: uppercase;
+}
+
+#primary #main .post-content .post-info .cat:before {
+	content:url('../img/post/cat-post.svg');
+	padding-right: 0.6em;
+}
+
+#primary #main .post-content .post-info .time:before {
+	content:url('../img/post/date-post.svg');
+	padding-right: 0.6em;
+}
+
+#primary #main .post-content .post-info .author:before {
+	content:url('../img/post/user-post.svg');
+	padding-right: 0.6em;
+}
+
+
+#primary #main .post-content #comments{
+	background: #08133F;
+	padding: 1em;
+	text-align: center;
+}
+
+#primary #main .post-content #comments h3#reply-title{
+	color: #fff;
+}
+
+#primary #main .post-content #comments form p{
+	color: #fff;
+}
+
+#primary #main .post-content #comments form p.form-submit{
+	color: #08133F;
+}
+
+#primary #main .post-content #comments form p.comment-form-comment label{
+	display: none;
+}
+
+#primary #main .post-content #comments form p.comment-form-comment textarea{
+	display: block;
+	width: 50%;
+	margin: auto;
+	color: #08133F;
+    padding: 1em;
+}
+
+#primary #main .post-content #comments ol{
+	list-style: none;
+    text-align: left;
+    margin: 0.2em auto;
+}
+
+#primary #main .post-content #comments ol li{
+    margin: 0.2em auto;
+}
+
+#primary #main .post-content #comments ol article{
+	color: #fff;
+    border-left: 1em solid #FFC11C;
+    background: rgba(255,255,255,0.5);
+    padding: 0.5em;
+}
+
+#primary #main .post-content #comments ol article footer{
+	background: none;
+	padding: 0;
+}
+
+#primary #main .post-content #comments ol article footer .comment-author{
+	border-bottom: 2px solid;
+    padding: 0.2em;
+}
+
+#primary #main .post-content #comments ol article footer .comment-metadata{
+	text-align: right;
+}
+
+#primary #main .post-content #comments ol article footer .comment-metadata time{
+	font-style: italic;
+}
+
+/* Pagination */
+
+#primary #main .custom-pagination{
+	text-align: center;
+	font-size: 1.2em;
+	margin: 2em auto;
+}
+
+#primary #main .custom-pagination span, #primary #main .custom-pagination a {
+  display: inline-block;
+  padding: 2px 10px;
+}
+
+#primary #main .custom-pagination a {
+  background-color: #ebebeb;
+  color: #08133F;
+}
+
+#primary #main .custom-pagination a:hover {
+  background-color: #08133F;
+  color: #fff;
+}
+
+#primary #main .custom-pagination span.page-num {
+  margin-right: 10px;
+  padding: 0;
+}
+
+#primary #main .custom-pagination span.dots {
+  padding: 0;
+  color: gainsboro;
+}
+
+#primary #main .custom-pagination span.current {
+  background-color: #08133F;
+  color: #fff;
+}
 
 .mouse-icon {
-    border: 2px solid #fff;
+    border: 2px solid #08133F;
     border-radius: 16px;
     display: block;
     height: 50px;
@@ -297,7 +525,7 @@ header .container .menu a:after {
     animation-timing-function: linear;
 }
 .mouse-icon .scroll {
-    background: #fff none repeat scroll 0 0;
+    background: #08133F none repeat scroll 0 0;
     border-radius: 10px;
     height: 10px;
     margin-left: auto;
@@ -340,7 +568,7 @@ header .container .menu a:after {
 
 
 #bec-what {
-  background: #ededed;
+  background: #08133F;
   min-height: 300px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -350,7 +578,7 @@ header .container .menu a:after {
 
 hr.line {
 	width: 100%;
-	border: 2px solid #525252;
+	border: 2px solid #08133F;
 }
 
 .screen {
@@ -358,7 +586,7 @@ hr.line {
     height: auto;
 }
 
-.screen img {
+.screen img, .screen object, .screen svg {
     margin: 0 auto;
     position: absolute;
     left: 0;
@@ -367,6 +595,12 @@ hr.line {
     max-width: 600px;
 }
 
+#Button{
+	-webkit-transform: scale(1.3);
+	-moz-transform:    scale(1.3);
+	-o-transform:      scale(1.3);
+	-ms-transform:     scale(1.3);
+}
 
 #contact {
   background: #f2f2f2;
@@ -406,11 +640,11 @@ hr.line {
     float: right;
     display: inline-block;
     border-radius: 50%;
-    background-color: white;
+    background-color: #08133F;
 }
 
 pre {
-  background-color: #fff;
+  background-color: #08133F;
   overflow: auto;
   margin: 0;
   padding: 0 0 0 0;
@@ -420,7 +654,7 @@ pre {
 
 pre code, pre .line-number {
   font:normal normal 12px/14px "Courier New",Courier,Monospace;
-  color: #525252;
+  color: #ffffff;
   display:block;
   padding: 1em 0 1em 0;
 }
@@ -431,7 +665,7 @@ pre .line-number {
   border-right:1px solid;
   background: #EFEFEF;
   font-weight: 700;
-  color : #C1C1C1;
+  color : #08133F;
   text-align:right;
 }
 
@@ -446,7 +680,7 @@ pre .cl {
 }
 
 pre code span.type, pre code span.function {
-    color: #525252;
+    color: #ffffff;
 }
 
 pre code span.function {
@@ -458,7 +692,7 @@ pre code span.comment{
 }
 
 pre code span.bec3{
-    color: #eb683c;
+    color: #FFC11C;
     font-weight: 700;
 }
 
@@ -514,7 +748,7 @@ footer .copyright{
 
 
 #learn {
-  background: #eb683c;
+  background: #FFC11C;
 }
 
 #learn .section {
@@ -605,7 +839,7 @@ footer .copyright{
 
 #huge_it_videogallery_content_1 #huge_it_videogallery_container_1 .videoelement_1 .title-block_1 h3{
 	text-align: center;
-	color: #ffffff !important;
+	color: #08133F !important;
 }
 
 #huge_it_videogallery_content_1 #huge_it_videogallery_container_1 .videoelement_1 .title-block_1 h3.sizeGird{
@@ -613,7 +847,7 @@ footer .copyright{
 }
 
 #huge_it_videogallery_content_1 #huge_it_videogallery_container_1 .videoelement_1 .image-block_1 .videogallery-image-overlay.black_bg{
-	background: rgba(0,0,0,0.3) !important
+	background: #08133F !important;
 }
 
 @media (max-width: 960px) { 
