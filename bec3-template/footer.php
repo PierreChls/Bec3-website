@@ -4,7 +4,7 @@
 	      <div class="container">
 	        
 	        <div class="row">
-	          <div class="social"><a href="https://twitter.com/" target="_blank" class="twitter"></a> <a href="https://facebook.com/" target="_blank" class="facebook"></a></small></p>
+	          <div class="social"><a href="http://www.twitter.com/bec3_iot/" target="_blank" class="twitter"></a> <a href="http://www.facebook.com/bec3.IoT/" target="_blank" class="facebook"></a></small></p>
 	          </div>
 	          
 	          <div class="copyright">

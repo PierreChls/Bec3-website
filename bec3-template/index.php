@@ -1,5 +1,32 @@
-<?php get_header(); ?>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?> class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<title>BeC3</title>
+	  	<meta name="keywords" content="">
+	  	<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<meta property="og:title" content="">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="">
+		<meta property="og:site_name" content="">
+	 	<meta property="og:description" content="">
+	
+	 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
+	  
+	 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css" media="screen" type="text/css" />
+	 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css" media="screen" type="text/css" />
+	 	
+	 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/hamburgers.css" media="screen" type="text/css" />
+	 	
+	 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	 	<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-2.7.1.js"></script>
+	
+	</head>
 
+	<body>
+	
 		<header>
 	      <div class="container">
 	      	<div class="menu">
@@ -7,27 +34,41 @@
 		          <div class="col-xs-3">
 		            <a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/logo.svg" alt="Logo"></a>
 		          </div>
-		          <div class="col-xs-9 signin text-right navbar-nav">
-		          	<?php
-		          	
-		          		$defaults = array(
-						    'menu' => 'main-menu-index',
-						    'menu_id' => 'main-menu-index',
-						    'menu_class'        => false, 
-						    'echo'            => false,
-						    'fallback_cb'     => false,
-						    'depth'           => 0,
-						    'items_wrap'        => '%3$s', 
-						    'container'         => false,
-						    'container_class'   => false,
-						    'container_id'      => false,
-						    'before'            => false,
-						    'after'             => false
-						);
-
-						echo strip_tags( wp_nav_menu($defaults) , '<a>');
+		          
+		          <div class="nav-icon">
+				  	<div class="hamburger hamburger--spring">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+				  </div>
+		          
+		          <div class="text-right navbar-nav">
+		          
+					<div class="nav-menu">
+					
+			          	<?php
+			          	
+			          		$defaults = array(
+							    'menu' => 'main-menu-index',
+							    'menu_id' => 'main-menu-index',
+							    'menu_class'        => false, 
+							    'echo'            => false,
+							    'fallback_cb'     => false,
+							    'depth'           => 0,
+							    'items_wrap'        => '%3$s', 
+							    'container'         => false,
+							    'container_class'   => false,
+							    'container_id'      => false,
+							    'before'            => false,
+							    'after'             => false
+							);
+	
+							echo strip_tags( wp_nav_menu($defaults) , '<a>');
+							
+						?>
 						
-					?>
+						</div>
 		          </div>
 		        </div>
 	      	</div>
@@ -82,7 +123,7 @@
 					$my_posts = get_posts( $args );
 					if( $my_posts ) { ?>
 						<h2 class="white"><?php echo $my_posts[0]->post_title ?></h2>
-						<p class="lead white"><?php echo $my_posts[0]->post_content ?></p>
+						<p class="lead description white"><?php echo $my_posts[0]->post_content ?></p>
 					<?php						
 					}
 				?>
@@ -95,9 +136,9 @@
 	      </div>
 	    </section>
 	    
-	    <section id="main-info" class="pad-xl">
+	    <section id="bec-what-cat" class="pad-xl">
 		    <div class="container">
-			    <div class="row">
+			    <div class="row cats">
 			    	<?php
 						$the_slug = 'bec3-what-categories';
 						$args=array(
@@ -131,7 +172,7 @@
 					$my_posts = get_posts( $args );
 					if( $my_posts ) { ?>	
 						<h2 class="black"><?php echo $my_posts[0]->post_title ?></h2>
-						<p class="black"><?php echo $my_posts[0]->post_content ?></p>		
+						<p class="lead description black"><?php echo $my_posts[0]->post_content ?></p>		
 					<?php
 					}
 				?>
@@ -144,6 +185,16 @@
 				</div>
 	        </div>
 	        
+	        <div class="row">
+	        	<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+	            	<div class="row">
+	                	<div class="col-xs-12 text-center">
+	                    	<a href="<?php echo get_site_url(); ?>/learning-center" class="btn btn-primary btn-bg-black btn-lg">More</a>
+						</div>
+	                </div><!--End Button Row-->  
+				</div>
+			</div>
+	        
 	      </div>
 	    </section>
 	    
@@ -151,8 +202,21 @@
 	      <div class="container">
 	        <div class="row margin-40">
 	          <div class="col-sm-8 col-sm-offset-2 text-center">
-	            <h2>BeC3-lib</h2>
-	            <p>A very easy C++ Library to interact with objects connected on Bec3.</p>
+	          	<?php
+					$the_slug = 'bec3-lib';
+					$args=array(
+						'name'           => $the_slug,
+						'post_type'      => 'post',
+						'post_status'    => 'publish',
+						'posts_per_page' => 1
+					);
+					$my_posts = get_posts( $args );
+					if( $my_posts ) { ?>	
+						<h2><?php echo $my_posts[0]->post_title ?></h2>
+						<p class="lead description"><?php echo $my_posts[0]->post_content ?></p>		
+					<?php
+					}
+				?>
 	          </div>
 	        </div>
 	        
@@ -168,7 +232,7 @@
     <span class="function">while</span>(done){
     	<span class="bec3">mySession.updateObjects();</span>
     	
-    	<span class="function">if</span>( <span class="bec3">mySession.getObjectState( "My" ).getBool()</span> == true ){
+    	<span class="function">if</span>( <span class="bec3">mySession.getObjectState("Light").getBool()</span> == true ){
     		<span class="comment">/*Do something*/</span>
     	}
     }
@@ -182,10 +246,10 @@
 	              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
 	                <div class="row">
 	                  <div class="col-xs-6 text-right">
-	                    <a href="#" class="btn btn-secondary btn-lg scroll">Download on Github</a>
+	                    <a href="http://github.com/PierreChls/Bec3-lib" target="_blank" class="btn btn-secondary btn-lg scroll">Download</a>
 	                  </div>
 	                  <div class="col-xs-6 text-left">
-	                    <a href="#invite" class="btn btn-secondary btn-lg scroll">See documentation</a>
+	                    <a href="http://github.com/PierreChls/Bec3-lib" target="_blank" class="btn btn-secondary btn-lg scroll">Documentation</a>
 	                  </div>
 	                </div><!--End Button Row-->  
 	              </div>

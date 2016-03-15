@@ -47,6 +47,10 @@ h3 {
   font-weight: 400;
 }
 
+.lead.description{
+	padding: 1em;
+}
+
 p {
   font-size: 17px;
   line-height: 22px;
@@ -76,12 +80,12 @@ a:hover, a:focus {
 }
 
 ::selection {
-	background: #08133F; /* Safari */
-	color: #FFFFFF;
+	background: #FFC11C; /* Safari */
+	color: #08133F;
 }
 ::-moz-selection {
-	background: #08133F; /* Firefox */
-	color: #FFFFFF;
+	background: #FFC11C; /* Firefox */
+	color: #08133F;
 }
 
 
@@ -132,6 +136,15 @@ a:hover, a:focus {
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
   background-color: #FFC11C;
   color: #ffffff;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.btn-bg-black:hover, .btn-bg-black:focus, .btn-bg-black:active, .btn-bg-black.active {
+  background-color: #08133F;
+  color: #FFC11C;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
@@ -232,6 +245,10 @@ header {
   -o-background-size: cover;
 }
 
+header.menu-open{
+	height: 250vh;
+}
+
 header.page{
 	height: auto;
 	padding: 0px 0px 0px 0px;
@@ -245,7 +262,7 @@ header .container {
 
 header .container .menu {
 	margin: 0 auto;
-	padding: 20px 50px 30px 50px;
+	padding: 1.5em 2em;
 	background: #08133F;
 }
 
@@ -266,12 +283,11 @@ header .container .menu a:after {
 	content:"\00a0\00a0\00a0\00a0";
 }
 
-
-
 .header-info {
   position: relative;
   width: 100%;
-  margin-top: 4em;
+  height: 100%;
+  margin: 11vh auto;
 }
 
 .header-info h1{
@@ -284,9 +300,103 @@ header .container .menu a:after {
   line-height: 5vh;
 }
 
+@media screen and (max-width: 780px){
+	.header-info h1{
+	  font-size: 8vh;
+	  line-height: 8vh;
+	}
+	.header-info p.lead{
+	  font-size: 4vh;
+	  line-height: 4vh;
+	}
+}
+
+@media screen and (max-height: 450px){
+	.header-info {
+	  margin: 2vh auto;
+	}
+}
+
+@media screen and (max-height: 330px){
+	.header-info {
+	  margin: 0 auto;
+	}
+	.header-info h1{
+	  font-size: 7vh;
+	  line-height: 7vh;
+	}
+	.header-info p.lead{
+	  font-size: 3vh;
+	  line-height: 3vh;
+	}
+}
+
+.navbar-nav{
+	float: right;
+}
+
+.navbar-nav .nav-menu{
+	padding: 0.3em;
+}
+
+.nav-icon{
+	padding: 0.3em 1.5em;
+	float: right;
+	display: none;
+}
+
+@media screen and (max-width: 900px){
+	.nav-icon{
+		display: block;
+	}
+	.navbar-nav .nav-menu{
+		display: none;
+	}
+	.navbar-nav.open{
+		float: none;
+	}
+	
+	.navbar-nav.open .nav-menu{
+		display: block;
+		margin: 5em auto;
+		width: 100%;
+		height: 100vh;
+		text-align: center;
+		overflow: scroll;
+	}
+	
+	.navbar-nav.open .nav-menu a{
+		display: block;
+		padding: 1em 0;
+		text-align: center;
+	}
+	.col-xs-3{
+		width: auto;
+	}
+}
+
 
 .signin {
   padding-top: 9px;
+}
+
+#primary #main .page-content{
+	padding: 2em;
+	border-bottom: 3em solid #FFC11C;
+}
+
+@media screen and (max-width: 900px){
+	#primary #main .page-content{
+		padding: 1em;
+	}
+}
+
+#primary #main .page-content h1, #primary #main .page-content h2, #primary #main .page-content h3, #primary #main .page-content h4, #primary #main .page-content h5, #primary #main .page-content h6 {
+	margin: 1em auto;
+}
+
+#primary #main .page-content h1, #primary #main .page-content h2, #primary #main .page-content h3, #primary #main .page-content h4, #primary #main .page-content h5, #primary #main .page-content h6 {
+	margin: 1em auto;
 }
 
 #primary #main h1.header-news-title{
@@ -406,7 +516,17 @@ header .container .menu a:after {
 #primary #main .post-content #comments{
 	background: #08133F;
 	padding: 1em;
+	margin: 1em auto;
 	text-align: center;
+}
+
+#primary #main .post-content #comments comments-title{
+	display: none;
+}
+
+
+#primary #main .post-content #comments a:hover{
+	color: #fff;
 }
 
 #primary #main .post-content #comments h3#reply-title{
@@ -444,10 +564,11 @@ header .container .menu a:after {
 }
 
 #primary #main .post-content #comments ol article{
-	color: #fff;
+	color: #08133F;
     border-left: 1em solid #FFC11C;
-    background: rgba(255,255,255,0.5);
+    background: #FFF;
     padding: 0.5em;
+    margin: 0.5em auto;
 }
 
 #primary #main .post-content #comments ol article footer{
@@ -576,6 +697,10 @@ header .container .menu a:after {
   background-size: cover;
 }
 
+#bec-what-cat .cats {
+  text-align: justify;
+}
+
 hr.line {
 	width: 100%;
 	border: 2px solid #08133F;
@@ -688,7 +813,7 @@ pre code span.function {
 }
 
 pre code span.comment{
-    color: rgba(0,0,0,0.3);
+    color: rgba(255,255,255,0.4);
 }
 
 pre code span.bec3{
@@ -815,6 +940,7 @@ footer .copyright{
 	height: auto !important;
 	width: 100%;
 	margin: auto;
+	padding: 1em;
 }
 
 #huge_it_videogallery_content_1 #huge_it_videogallery_container_1 .videoelement_1{
