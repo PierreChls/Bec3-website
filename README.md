@@ -11,7 +11,7 @@ Wordpress template for BeC3 realised in IMAC Engineering School.
 - Opera
 
 
-![screenshot](http://github.com/PierreChls/Bec3-website/blob/master/bec3-template/screenshot.png)
+![alt tag](http://github.com/PierreChls/Bec3-website/blob/master/bec3-template/screenshot.png)
 
 
 
