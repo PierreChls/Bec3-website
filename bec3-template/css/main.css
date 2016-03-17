@@ -4,23 +4,25 @@
 /*                              */
 /********************************/
 
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans|Roboto|Lato|Roboto+Condensed|Raleway|Montserrat|Open+Sans+Condensed:300|Poiret+One|Droid+Sans:400,700|Muli|PT+Sans);
+
 /**************/
 /*   TITLES   */
 /**************/
  
 h1, h2, h3, h4, h5, h6, p, .btn, .navbar-nav a, .form-control, .list-inline, small, #pricing {
-  font-family: 'Montserrat', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 p, .lead {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
   font-size: 55px;
   line-height: 55px;
   letter-spacing: -1px;
-  color: #08133F;
+  color: #212E64;
   font-weight: 700;
 }
 
@@ -28,7 +30,7 @@ h2 {
   font-size: 40px;
   line-height: 40px;
   letter-spacing: -0.5px;
-  color: #08133F;
+  color: #212E64;
   font-weight: 700;
 }
 
@@ -36,14 +38,14 @@ h3 {
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0px;
-  color: #08133F;
+  color: #212E64;
   font-weight: 700;
 }
 
 .lead {
   font-size: 21px;
   line-height: 26px;
-  color: #08133F;
+  color: #212E64;
   font-weight: 400;
 }
 
@@ -54,7 +56,7 @@ h3 {
 p {
   font-size: 17px;
   line-height: 22px;
-  color: #08133F;
+  color: #212E64;
   font-weight: 400;
 }
 
@@ -72,7 +74,7 @@ a {
 
 a:hover, a:focus {
   text-decoration: none;
-  color: #08133F;
+  color: #212E64;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
@@ -81,11 +83,11 @@ a:hover, a:focus {
 
 ::selection {
 	background: #FFC11C; /* Safari */
-	color: #08133F;
+	color: #212E64;
 }
 ::-moz-selection {
 	background: #FFC11C; /* Firefox */
-	color: #08133F;
+	color: #212E64;
 }
 
 
@@ -129,7 +131,7 @@ a:hover, a:focus {
 }
 
 .btn-primary {
-  background-color:#08133F;
+  background-color:#212E64;
   color: #ffffff;
 }
 
@@ -143,7 +145,7 @@ a:hover, a:focus {
 }
 
 .btn-bg-black:hover, .btn-bg-black:focus, .btn-bg-black:active, .btn-bg-black.active {
-  background-color: #08133F;
+  background-color: #212E64;
   color: #FFC11C;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -213,14 +215,14 @@ a:hover, a:focus {
 /************/
 
 .black {
-  color: #08133F;
+  color: #212E64;
 }
 .white {
   color: #ffffff;
 }
 
 .black-bg {
-  background: #08133F;
+  background: #212E64;
 }
 
 .white-bg {
@@ -263,7 +265,7 @@ header .container {
 header .container .menu {
 	margin: 0 auto;
 	padding: 1.5em 2em;
-	background: #08133F;
+	background: #212E64;
 }
 
 header .container .menu a{
@@ -385,6 +387,17 @@ header .container .menu a:after {
 	border-bottom: 3em solid #FFC11C;
 }
 
+#primary #main .page-content .links-return{
+	margin: 3em auto;
+}
+
+#primary #main .page-content .links-return a.link-return{
+    text-align: center;
+    padding: 1em;
+    color: #FFF;
+    background: #212E64
+}
+
 @media screen and (max-width: 900px){
 	#primary #main .page-content{
 		padding: 1em;
@@ -402,7 +415,7 @@ header .container .menu a:after {
 #primary #main h1.header-news-title{
 	color: #ffffff;
     text-align: center;
-    background: #08133F;
+    background: #212E64;
     padding: 1em;
     margin: 0;
 }
@@ -421,7 +434,6 @@ header .container .menu a:after {
 
 #primary #main .all-news{
 	padding: 1em;
-	width: auto;
 	margin: auto;
 }
 
@@ -476,7 +488,7 @@ header .container .menu a:after {
 #primary #main .post-content h1.header-post-title{
 	color: #ffffff;
     text-align: center;
-    background: #08133F;
+    background: #212E64;
     padding: 1em;
     margin: 0;
 }
@@ -514,7 +526,7 @@ header .container .menu a:after {
 
 
 #primary #main .post-content #comments{
-	background: #08133F;
+	background: #212E64;
 	padding: 1em;
 	margin: 1em auto;
 	text-align: center;
@@ -538,7 +550,7 @@ header .container .menu a:after {
 }
 
 #primary #main .post-content #comments form p.form-submit{
-	color: #08133F;
+	color: #212E64;
 }
 
 #primary #main .post-content #comments form p.comment-form-comment label{
@@ -549,7 +561,7 @@ header .container .menu a:after {
 	display: block;
 	width: 50%;
 	margin: auto;
-	color: #08133F;
+	color: #212E64;
     padding: 1em;
 }
 
@@ -564,7 +576,7 @@ header .container .menu a:after {
 }
 
 #primary #main .post-content #comments ol article{
-	color: #08133F;
+	color: #212E64;
     border-left: 1em solid #FFC11C;
     background: #FFF;
     padding: 0.5em;
@@ -604,11 +616,11 @@ header .container .menu a:after {
 
 #primary #main .custom-pagination a {
   background-color: #ebebeb;
-  color: #08133F;
+  color: #212E64;
 }
 
 #primary #main .custom-pagination a:hover {
-  background-color: #08133F;
+  background-color: #212E64;
   color: #fff;
 }
 
@@ -623,12 +635,12 @@ header .container .menu a:after {
 }
 
 #primary #main .custom-pagination span.current {
-  background-color: #08133F;
+  background-color: #212E64;
   color: #fff;
 }
 
 .mouse-icon {
-    border: 2px solid #08133F;
+    border: 2px solid #212E64;
     border-radius: 16px;
     display: block;
     height: 50px;
@@ -646,7 +658,7 @@ header .container .menu a:after {
     animation-timing-function: linear;
 }
 .mouse-icon .scroll {
-    background: #08133F none repeat scroll 0 0;
+    background: #212E64 none repeat scroll 0 0;
     border-radius: 10px;
     height: 10px;
     margin-left: auto;
@@ -689,7 +701,7 @@ header .container .menu a:after {
 
 
 #bec-what {
-  background: #08133F;
+  background: #212E64;
   min-height: 300px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -703,7 +715,7 @@ header .container .menu a:after {
 
 hr.line {
 	width: 100%;
-	border: 2px solid #08133F;
+	border: 2px solid #212E64;
 }
 
 .screen {
@@ -765,11 +777,11 @@ hr.line {
     float: right;
     display: inline-block;
     border-radius: 50%;
-    background-color: #08133F;
+    background-color: #212E64;
 }
 
 pre {
-  background-color: #08133F;
+  background-color: #212E64;
   overflow: auto;
   margin: 0;
   padding: 0 0 0 0;
@@ -790,7 +802,7 @@ pre .line-number {
   border-right:1px solid;
   background: #EFEFEF;
   font-weight: 700;
-  color : #08133F;
+  color : #212E64;
   text-align:right;
 }
 
@@ -965,7 +977,7 @@ footer .copyright{
 
 #huge_it_videogallery_content_1 #huge_it_videogallery_container_1 .videoelement_1 .title-block_1 h3{
 	text-align: center;
-	color: #08133F !important;
+	color: #212E64 !important;
 }
 
 #huge_it_videogallery_content_1 #huge_it_videogallery_container_1 .videoelement_1 .title-block_1 h3.sizeGird{
@@ -973,7 +985,11 @@ footer .copyright{
 }
 
 #huge_it_videogallery_content_1 #huge_it_videogallery_container_1 .videoelement_1 .image-block_1 .videogallery-image-overlay.black_bg{
-	background: #08133F !important;
+	background: #212E64 !important;
+}
+
+#huge_it_videogallery_content_1 #huge_it_videogallery_container_1 .videoelement_1 .image-block_1 .videogallery-image-overlay a {
+	background: url('../img/zoom-light.svg') center center no-repeat !important;
 }
 
 @media (max-width: 960px) { 

@@ -13,7 +13,7 @@
 			<a href="<?php echo esc_url( $category_link ); ?>" title="News">Return all news</a>
 		</div>
 		
-		<div class="all-news">
+		<div class="all-news container">
 		
 		<?php $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 

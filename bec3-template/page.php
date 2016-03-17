@@ -6,17 +6,19 @@
 		<h1 class="header-news-title"><?php the_title() ?></h1>
 		
 		<div class="page-content">
-			<?php 
-				
-				if ( have_posts() ) : while ( have_posts() ) : the_post();
+			<div class="container">
+				<?php 
 					
-						the_content();
+					if ( have_posts() ) : while ( have_posts() ) : the_post();
 						
-					endwhile;
-				else : ?>
-					<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p> <?php
-				endif;
-			?>
+							the_content();
+							
+						endwhile;
+					else : ?>
+						<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p> <?php
+					endif;
+				?>
+			</div>
 		</div>
 
 

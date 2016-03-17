@@ -15,7 +15,7 @@
 					<p class="author"> <?php echo get_the_author(); ?> </p>
 				</div>
 				
-				<div class="content">
+				<div class="content container">
 					<?php the_content(); ?>
 				</div>
 	
