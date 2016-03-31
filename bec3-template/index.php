@@ -22,7 +22,9 @@
 	 	
 	 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	 	<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-2.7.1.js"></script>
-	
+	 	
+	 	<script type="text/javascript" charset="utf-8" src="<?php bloginfo('template_directory'); ?>/include-anim/testedge_edgePreload.js"></script>
+	 	
 	</head>
 
 	<body>
@@ -129,12 +131,10 @@
 				?>
 	          </div>
 	        </div>
-	        
-	        <div class="screen">
-	        	<object type="image/svg+xml" data="<?php bloginfo('template_directory'); ?>/img/screen.svg"  border="0"></object>
-	        </div>
-	      </div>
 	    </section>
+	    
+	    <!-- Animation SVG -->
+	    <div id="Stage" class="EDGE-1854784"></div>
 	    
 	    <section id="bec-what-cat" class="pad-xl">
 		    <div class="container">
