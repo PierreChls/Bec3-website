@@ -1,13 +1,11 @@
 <?php
-/**
- * The template for displaying image attachments
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
+	
+	/* @theme BeC3-Theme */
 
-get_header(); ?>
+?>
+
+
+<?php get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

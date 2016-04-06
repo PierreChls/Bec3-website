@@ -1,21 +1,13 @@
 <?php
-/**
- * Twenty Fifteen Customizer functionality
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
+	
+	/* @theme BeC3-Theme */
 
-/**
- * Add postMessage support for site title and description for the Customizer.
- *
- * @since Twenty Fifteen 1.0
- *
- * @param WP_Customize_Manager $wp_customize Customizer object.
- */
-function twentyfifteen_customize_register( $wp_customize ) {
-	$color_scheme = twentyfifteen_get_color_scheme();
+?>
+
+<?php
+
+function bec3_customize_register( $wp_customize ) {
+	$color_scheme = bec3_get_color_scheme();
 
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -23,15 +15,15 @@ function twentyfifteen_customize_register( $wp_customize ) {
 	// Add color scheme setting and control.
 	$wp_customize->add_setting( 'color_scheme', array(
 		'default'           => 'default',
-		'sanitize_callback' => 'twentyfifteen_sanitize_color_scheme',
+		'sanitize_callback' => 'bec3_sanitize_color_scheme',
 		'transport'         => 'postMessage',
 	) );
 
 	$wp_customize->add_control( 'color_scheme', array(
-		'label'    => __( 'Base Color Scheme', 'twentyfifteen' ),
+		'label'    => __( 'Base Color Scheme', 'bec3' ),
 		'section'  => 'colors',
 		'type'     => 'select',
-		'choices'  => twentyfifteen_get_color_scheme_choices(),
+		'choices'  => bec3_get_color_scheme_choices(),
 		'priority' => 1,
 	) );
 
@@ -43,8 +35,8 @@ function twentyfifteen_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'sidebar_textcolor', array(
-		'label'       => __( 'Header and Sidebar Text Color', 'twentyfifteen' ),
-		'description' => __( 'Applied to the header on small screens and the sidebar on wide screens.', 'twentyfifteen' ),
+		'label'       => __( 'Header and Sidebar Text Color', 'bec3' ),
+		'description' => __( 'Applied to the header on small screens and the sidebar on wide screens.', 'bec3' ),
 		'section'     => 'colors',
 	) ) );
 
@@ -59,58 +51,24 @@ function twentyfifteen_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_background_color', array(
-		'label'       => __( 'Header and Sidebar Background Color', 'twentyfifteen' ),
-		'description' => __( 'Applied to the header on small screens and the sidebar on wide screens.', 'twentyfifteen' ),
+		'label'       => __( 'Header and Sidebar Background Color', 'bec3' ),
+		'description' => __( 'Applied to the header on small screens and the sidebar on wide screens.', 'bec3' ),
 		'section'     => 'colors',
 	) ) );
 
 	// Add an additional description to the header image section.
-	$wp_customize->get_section( 'header_image' )->description = __( 'Applied to the header on small screens and the sidebar on wide screens.', 'twentyfifteen' );
+	$wp_customize->get_section( 'header_image' )->description = __( 'Applied to the header on small screens and the sidebar on wide screens.', 'bec3' );
 }
-add_action( 'customize_register', 'twentyfifteen_customize_register', 11 );
+add_action( 'customize_register', 'bec3_customize_register', 11 );
 
-/**
- * Register color schemes for Twenty Fifteen.
- *
- * Can be filtered with {@see 'twentyfifteen_color_schemes'}.
- *
- * The order of colors in a colors array:
- * 1. Main Background Color.
- * 2. Sidebar Background Color.
- * 3. Box Background Color.
- * 4. Main Text and Link Color.
- * 5. Sidebar Text and Link Color.
- * 6. Meta Box Background Color.
- *
- * @since Twenty Fifteen 1.0
- *
- * @return array An associative array of color scheme options.
- */
-function twentyfifteen_get_color_schemes() {
-	/**
-	 * Filter the color schemes registered for use with Twenty Fifteen.
-	 *
-	 * The default schemes include 'default', 'dark', 'yellow', 'pink', 'purple', and 'blue'.
-	 *
-	 * @since Twenty Fifteen 1.0
-	 *
-	 * @param array $schemes {
-	 *     Associative array of color schemes data.
-	 *
-	 *     @type array $slug {
-	 *         Associative array of information for setting up the color scheme.
-	 *
-	 *         @type string $label  Color scheme label.
-	 *         @type array  $colors HEX codes for default colors prepended with a hash symbol ('#').
-	 *                              Colors are defined in the following order: Main background, sidebar
-	 *                              background, box background, main text and link, sidebar text and link,
-	 *                              meta box background.
-	 *     }
-	 * }
-	 */
-	return apply_filters( 'twentyfifteen_color_schemes', array(
+
+
+function bec3_get_color_schemes() {
+	
+	
+	return apply_filters( 'bec3_color_schemes', array(
 		'default' => array(
-			'label'  => __( 'Default', 'twentyfifteen' ),
+			'label'  => __( 'Default', 'bec3' ),
 			'colors' => array(
 				'#f1f1f1',
 				'#ffffff',
@@ -121,7 +79,7 @@ function twentyfifteen_get_color_schemes() {
 			),
 		),
 		'dark'    => array(
-			'label'  => __( 'Dark', 'twentyfifteen' ),
+			'label'  => __( 'Dark', 'bec3' ),
 			'colors' => array(
 				'#111111',
 				'#202020',
@@ -132,7 +90,7 @@ function twentyfifteen_get_color_schemes() {
 			),
 		),
 		'yellow'  => array(
-			'label'  => __( 'Yellow', 'twentyfifteen' ),
+			'label'  => __( 'Yellow', 'bec3' ),
 			'colors' => array(
 				'#f4ca16',
 				'#ffdf00',
@@ -143,7 +101,7 @@ function twentyfifteen_get_color_schemes() {
 			),
 		),
 		'pink'    => array(
-			'label'  => __( 'Pink', 'twentyfifteen' ),
+			'label'  => __( 'Pink', 'bec3' ),
 			'colors' => array(
 				'#ffe5d1',
 				'#e53b51',
@@ -154,7 +112,7 @@ function twentyfifteen_get_color_schemes() {
 			),
 		),
 		'purple'  => array(
-			'label'  => __( 'Purple', 'twentyfifteen' ),
+			'label'  => __( 'Purple', 'bec3' ),
 			'colors' => array(
 				'#674970',
 				'#2e2256',
@@ -165,7 +123,7 @@ function twentyfifteen_get_color_schemes() {
 			),
 		),
 		'blue'   => array(
-			'label'  => __( 'Blue', 'twentyfifteen' ),
+			'label'  => __( 'Blue', 'bec3' ),
 			'colors' => array(
 				'#e9f2f9',
 				'#55c3dc',
@@ -178,17 +136,12 @@ function twentyfifteen_get_color_schemes() {
 	) );
 }
 
-if ( ! function_exists( 'twentyfifteen_get_color_scheme' ) ) :
-/**
- * Get the current Twenty Fifteen color scheme.
- *
- * @since Twenty Fifteen 1.0
- *
- * @return array An associative array of either the current or default color scheme hex values.
- */
-function twentyfifteen_get_color_scheme() {
+if ( ! function_exists( 'bec3_get_color_scheme' ) ) :
+
+
+function bec3_get_color_scheme() {
 	$color_scheme_option = get_theme_mod( 'color_scheme', 'default' );
-	$color_schemes       = twentyfifteen_get_color_schemes();
+	$color_schemes       = bec3_get_color_schemes();
 
 	if ( array_key_exists( $color_scheme_option, $color_schemes ) ) {
 		return $color_schemes[ $color_scheme_option ]['colors'];
@@ -196,18 +149,13 @@ function twentyfifteen_get_color_scheme() {
 
 	return $color_schemes['default']['colors'];
 }
-endif; // twentyfifteen_get_color_scheme
+endif;
 
-if ( ! function_exists( 'twentyfifteen_get_color_scheme_choices' ) ) :
-/**
- * Returns an array of color scheme choices registered for Twenty Fifteen.
- *
- * @since Twenty Fifteen 1.0
- *
- * @return array Array of color schemes.
- */
-function twentyfifteen_get_color_scheme_choices() {
-	$color_schemes                = twentyfifteen_get_color_schemes();
+if ( ! function_exists( 'bec3_get_color_scheme_choices' ) ) :
+
+
+function bec3_get_color_scheme_choices() {
+	$color_schemes                = bec3_get_color_schemes();
 	$color_scheme_control_options = array();
 
 	foreach ( $color_schemes as $color_scheme => $value ) {
@@ -216,19 +164,13 @@ function twentyfifteen_get_color_scheme_choices() {
 
 	return $color_scheme_control_options;
 }
-endif; // twentyfifteen_get_color_scheme_choices
+endif;
 
-if ( ! function_exists( 'twentyfifteen_sanitize_color_scheme' ) ) :
-/**
- * Sanitization callback for color schemes.
- *
- * @since Twenty Fifteen 1.0
- *
- * @param string $value Color scheme name value.
- * @return string Color scheme name.
- */
-function twentyfifteen_sanitize_color_scheme( $value ) {
-	$color_schemes = twentyfifteen_get_color_scheme_choices();
+if ( ! function_exists( 'bec3_sanitize_color_scheme' ) ) :
+
+
+function bec3_sanitize_color_scheme( $value ) {
+	$color_schemes = bec3_get_color_scheme_choices();
 
 	if ( ! array_key_exists( $value, $color_schemes ) ) {
 		$value = 'default';
@@ -236,16 +178,11 @@ function twentyfifteen_sanitize_color_scheme( $value ) {
 
 	return $value;
 }
-endif; // twentyfifteen_sanitize_color_scheme
+endif;
 
-/**
- * Enqueues front-end CSS for color scheme.
- *
- * @since Twenty Fifteen 1.0
- *
- * @see wp_add_inline_style()
- */
-function twentyfifteen_color_scheme_css() {
+
+
+function bec3_color_scheme_css() {
 	$color_scheme_option = get_theme_mod( 'color_scheme', 'default' );
 
 	// Don't do anything if the default color scheme is selected.
@@ -253,11 +190,11 @@ function twentyfifteen_color_scheme_css() {
 		return;
 	}
 
-	$color_scheme = twentyfifteen_get_color_scheme();
+	$color_scheme = bec3_get_color_scheme();
 
 	// Convert main and sidebar text hex color to rgba.
-	$color_textcolor_rgb         = twentyfifteen_hex2rgb( $color_scheme[3] );
-	$color_sidebar_textcolor_rgb = twentyfifteen_hex2rgb( $color_scheme[4] );
+	$color_textcolor_rgb         = bec3_hex2rgb( $color_scheme[3] );
+	$color_sidebar_textcolor_rgb = bec3_hex2rgb( $color_scheme[4] );
 	$colors = array(
 		'background_color'            => $color_scheme[0],
 		'header_background_color'     => $color_scheme[1],
@@ -273,44 +210,30 @@ function twentyfifteen_color_scheme_css() {
 		'meta_box_background_color'   => $color_scheme[5],
 	);
 
-	$color_scheme_css = twentyfifteen_get_color_scheme_css( $colors );
+	$color_scheme_css = bec3_get_color_scheme_css( $colors );
 
-	wp_add_inline_style( 'twentyfifteen-style', $color_scheme_css );
+	wp_add_inline_style( 'bec3-style', $color_scheme_css );
 }
-add_action( 'wp_enqueue_scripts', 'twentyfifteen_color_scheme_css' );
+add_action( 'wp_enqueue_scripts', 'bec3_color_scheme_css' );
 
-/**
- * Binds JS listener to make Customizer color_scheme control.
- *
- * Passes color scheme data as colorScheme global.
- *
- * @since Twenty Fifteen 1.0
- */
-function twentyfifteen_customize_control_js() {
+
+
+function bec3_customize_control_js() {
 	wp_enqueue_script( 'color-scheme-control', get_template_directory_uri() . '/js/color-scheme-control.js', array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), '20141216', true );
-	wp_localize_script( 'color-scheme-control', 'colorScheme', twentyfifteen_get_color_schemes() );
+	wp_localize_script( 'color-scheme-control', 'colorScheme', bec3_get_color_schemes() );
 }
-add_action( 'customize_controls_enqueue_scripts', 'twentyfifteen_customize_control_js' );
+add_action( 'customize_controls_enqueue_scripts', 'bec3_customize_control_js' );
 
-/**
- * Binds JS handlers to make the Customizer preview reload changes asynchronously.
- *
- * @since Twenty Fifteen 1.0
- */
-function twentyfifteen_customize_preview_js() {
-	wp_enqueue_script( 'twentyfifteen-customize-preview', get_template_directory_uri() . '/js/customize-preview.js', array( 'customize-preview' ), '20141216', true );
+
+
+function bec3_customize_preview_js() {
+	wp_enqueue_script( 'bec3-customize-preview', get_template_directory_uri() . '/js/customize-preview.js', array( 'customize-preview' ), '20141216', true );
 }
-add_action( 'customize_preview_init', 'twentyfifteen_customize_preview_js' );
+add_action( 'customize_preview_init', 'bec3_customize_preview_js' );
 
-/**
- * Returns CSS for the color schemes.
- *
- * @since Twenty Fifteen 1.0
- *
- * @param array $colors Color scheme colors.
- * @return string Color scheme CSS.
- */
-function twentyfifteen_get_color_scheme_css( $colors ) {
+
+
+function bec3_get_color_scheme_css( $colors ) {
 	$colors = wp_parse_args( $colors, array(
 		'background_color'            => '',
 		'header_background_color'     => '',
@@ -704,15 +627,9 @@ CSS;
 	return $css;
 }
 
-/**
- * Output an Underscore template for generating CSS for the color scheme.
- *
- * The template generates the css dynamically for instant display in the Customizer
- * preview.
- *
- * @since Twenty Fifteen 1.0
- */
-function twentyfifteen_color_scheme_css_template() {
+
+
+function bec3_color_scheme_css_template() {
 	$colors = array(
 		'background_color'            => '{{ data.background_color }}',
 		'header_background_color'     => '{{ data.header_background_color }}',
@@ -728,9 +645,9 @@ function twentyfifteen_color_scheme_css_template() {
 		'meta_box_background_color'   => '{{ data.meta_box_background_color }}',
 	);
 	?>
-	<script type="text/html" id="tmpl-twentyfifteen-color-scheme">
-		<?php echo twentyfifteen_get_color_scheme_css( $colors ); ?>
+	<script type="text/html" id="tmpl-bec3-color-scheme">
+		<?php echo bec3_get_color_scheme_css( $colors ); ?>
 	</script>
 	<?php
 }
-add_action( 'customize_controls_print_footer_scripts', 'twentyfifteen_color_scheme_css_template' );
+add_action( 'customize_controls_print_footer_scripts', 'bec3_color_scheme_css_template' );

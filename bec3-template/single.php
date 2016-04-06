@@ -1,3 +1,9 @@
+<?php
+	
+	/* @theme BeC3-Theme */
+
+?>
+
 <?php get_header(); ?>
 	
 	<div id="primary" class="content-area">
