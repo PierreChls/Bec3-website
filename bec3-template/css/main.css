@@ -721,14 +721,16 @@ hr.line {
 .screen {
     position: relative;
     height: auto;
+    width: 100%;
+    margin: -150px auto 0 auto;
+    display: block;
 }
 
 .screen img, .screen object, .screen svg{
-    margin: 0 auto;
-    position: absolute;
-    left: 0;
-    right: 0;
+   	margin: 0 auto;
+    position: relative;
     width: 100%;
+    display: block;
     max-width: 600px;
 }
 

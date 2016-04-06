@@ -23,7 +23,9 @@
 	 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	 	<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-2.7.1.js"></script>
 	 	
-	 	<script type="text/javascript" charset="utf-8" src="<?php bloginfo('template_directory'); ?>/include-anim/testedge_edgePreload.js"></script>
+	 	<script src="<?php bloginfo('template_directory'); ?>/js/mobile.js"></script>
+
+	 	
 	 	
 	</head>
 
