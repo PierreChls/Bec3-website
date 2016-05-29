@@ -3,7 +3,13 @@
  */
 (function($, Edge, compId){
 //images folder
+var isFirefox = typeof InstallTrigger !== 'undefined';
 var im='wp-content/themes/bec3/include-anim/images/';
+if(isFirefox==true){
+  var firefox = 0.039;
+}else {
+  firefox=0.1;
+}
 
 var fonts = {};
 var opts = {
@@ -112,7 +118,7 @@ var symbols = {
                     type: 'image',
                     rect: ['-3893px', '-99px','8650px','384px','auto', 'auto'],
                     fill: ["rgba(0,0,0,0)",im+"8_CONNECT.svg",'0px','0px'],
-                    transform: [[],[],[],['0.1','0.1']]
+                    transform: [[],[],[],[firefox,'0.1']]
                 },
                 {
                     id: 'Rectangle2',
